@@ -79,7 +79,7 @@ sub match {
         }
     }
     if ($self->{method_re}) {
-        unless (($env->{REQUEST_METHOD} || 'GET') =~ $self->{method_re}) {
+        unless (($env->{REQUEST_METHOD} || '') =~ $self->{method_re}) {
             return undef;
         }
     }
